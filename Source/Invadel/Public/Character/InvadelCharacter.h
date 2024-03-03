@@ -29,8 +29,4 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 	class UCameraComponent* FollowCamera;
 
-public:	
-
-	
-
 };
