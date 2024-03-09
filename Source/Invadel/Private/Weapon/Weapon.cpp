@@ -38,6 +38,8 @@ void AWeapon::BeginPlay()
 	{
 		AreaSphere->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 		AreaSphere->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Overlap);
+		AreaSphere->OnComponentBeginOverlap.AddDynamic(this, &AWeapon::OnSphereOverlap);
+		AreaSphere->OnComponentEndOverlap.AddDynamic(this, &AWeapon::OnSphereEndOverlap);
 	}
 
 	if (PickupWidget)
@@ -46,19 +48,34 @@ void AWeapon::BeginPlay()
 	}
 }
 
+void AWeapon::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+}
+
 void AWeapon::OnSphereOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 
 	AInvadelCharacter* InvadelCharacter = Cast<AInvadelCharacter>(OtherActor);
-	if (InvadelCharacter && PickupWidget)
+	if (InvadelCharacter)
 	{
-		PickupWidget->SetVisibility(true);
+		InvadelCharacter->SetOverlappingWeapon(this);;
 	}
 }
 
-void AWeapon::Tick(float DeltaTime)
+void AWeapon::OnSphereEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
-	Super::Tick(DeltaTime);
-
+	AInvadelCharacter* InvadelCharacter = Cast<ABlasterCharacter>(OtherActor);
+	if (InvadelCharacter)
+	{
+		InvadelCharacter->SetOverlappingWeapon(nullptr);
+	}
 }
 
+void AWeapon::ShowPickupWidget(bool bShowWidget)
+{
+	if (PickupWidget)
+	{
+		PickupWidget->SetVisibility(bShowWidget);
+	}
+}
