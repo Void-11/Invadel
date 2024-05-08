@@ -15,7 +15,7 @@ public:
 	
 	UCombatComponent();
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	friend class ABlasterCharacter;
+	friend class AInvadelCharacter;
 
 	void EquipWeapon(class AWeapon* WeaponToEquip);
 protected:
@@ -24,7 +24,7 @@ protected:
 
 private:
 	
-	class ABlasterCharacter* Character;
+	class AInvadelCharacter* Character;
 	AWeapon* EquippedWeapon;
 
 };

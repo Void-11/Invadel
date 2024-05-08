@@ -5,6 +5,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "InvadelComponents/CombatComponent.h"
 
 AInvadelCharacter::AInvadelCharacter()
 {
@@ -21,6 +22,9 @@ AInvadelCharacter::AInvadelCharacter()
 
 	bUseControllerRotationYaw = false;
 	GetCharacterMovement()->bOrientRotationToMovement = true;
+
+	Combat = CreateDefaultSubobject<UCombatComponent>(TEXT("Combat Component"));
+	Combat->SetIsReplicated(true);
 
 }
 

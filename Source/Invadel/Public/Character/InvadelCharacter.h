@@ -29,4 +29,6 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 	class UCameraComponent* FollowCamera;
 
+	UPROPERTY(VisibleAnywhere)
+	class UCombatComponent* Combat;
 };

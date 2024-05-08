@@ -62,3 +62,11 @@ void AWeapon::Tick(float DeltaTime)
 
 }
 
+void AWeapon::ShowPickupWidget(bool bShowWidget)
+{
+	if (PickupWidget)
+	{
+		PickupWidget->SetVisibility(bShowWidget);
+	}
+}
+
