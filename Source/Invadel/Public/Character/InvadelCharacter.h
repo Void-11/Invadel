@@ -6,6 +6,12 @@
 #include "GameFramework/Character.h"
 #include "InvadelCharacter.generated.h"
 
+class UCameraComponent;
+class UInputAction;
+class USpringArmComponent;
+class UInputMappingContext;
+struct FInputActionValue;
+
 UCLASS()
 class INVADEL_API AInvadelCharacter : public ACharacter
 {
@@ -21,14 +27,42 @@ protected:
 	
 	virtual void BeginPlay() override;
 
+	/** Called for movement input */
+	void Move(const FInputActionValue& Value);
+
+	/** Called for looking input */
+	void Look(const FInputActionValue& Value);
+
 private:
 
-	UPROPERTY(VisibleAnywhere, Category = Camera)
-	class USpringArmComponent* CameraBoom;
+	// Third Person Camera
+	
+	UPROPERTY(VisibleAnywhere, Category = "Camera")
+	TObjectPtr<USpringArmComponent> CameraBoom { nullptr };
 
-	UPROPERTY(VisibleAnywhere, Category = Camera)
-	class UCameraComponent* FollowCamera;
+	UPROPERTY(VisibleAnywhere, Category = "Camera")
+	TObjectPtr<UCameraComponent> FollowCamera { nullptr };
 
+	//------------------------------------------------------------------------------------------------------------------
+
+	// User Input
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Character Input", meta = (AllowPrivateAccess = "true", RuleRangerRequired))
+	TObjectPtr<UInputMappingContext> DefaultInputMapping { nullptr };
+
+	UPROPERTY(EditDefaultsOnly, Category = "Character Input", meta = (AllowPrivateAccess = "true", RuleRangerRequired))
+	TObjectPtr<UInputAction> MoveAction { nullptr };
+
+	UPROPERTY(EditDefaultsOnly, Category = "Character Input", meta = (AllowPrivateAccess = "true", RuleRangerRequired))
+	TObjectPtr<UInputAction> LookAction { nullptr };
+
+	UPROPERTY(EditDefaultsOnly, Category = "Character Input", meta = (AllowPrivateAccess = "true", RuleRangerRequired))
+	TObjectPtr<UInputAction> JumpAction { nullptr };
+
+	UPROPERTY(EditDefaultsOnly, Category = "Character Input", meta = (AllowPrivateAccess = "true", RuleRangerRequired))
+	TObjectPtr<UInputAction> CrouchAction { nullptr };
+	
+	//------------------------------------------------------------------------------------------------------------------
 	UPROPERTY(VisibleAnywhere)
 	class UCombatComponent* Combat;
 };
