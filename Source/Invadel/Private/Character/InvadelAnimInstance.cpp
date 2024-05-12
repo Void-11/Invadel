@@ -8,11 +8,10 @@
 void UInvadelAnimInstance::NativeInitializeAnimation()
 {
 	Super::NativeInitializeAnimation();
-
 	InvadelCharacter = Cast<AInvadelCharacter>(TryGetPawnOwner());
 }
 
-void UInvadelAnimInstance::NativeUpdateAnimation(float DeltaTime)
+void UInvadelAnimInstance::NativeUpdateAnimation(const float DeltaTime)
 {
 	Super::NativeUpdateAnimation(DeltaTime);
 
