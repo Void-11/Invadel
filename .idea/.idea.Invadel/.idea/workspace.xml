@@ -12,13 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1352d4fe-6ee0-419b-ab12-97744ec78dad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Invadel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Invadel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Invadel/Character/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Invadel/Character/BP_PlayerCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/GameStartupMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/GameStartupMap.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Invadel.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Invadel.uproject" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1881,7 +1878,7 @@
       <workItem from="1715531333331" duration="2067000" />
       <workItem from="1718038366409" duration="235000" />
       <workItem from="1718039944452" duration="348000" />
-      <workItem from="1718041763901" duration="1071000" />
+      <workItem from="1718041763901" duration="3804000" />
     </task>
     <servers />
   </component>
