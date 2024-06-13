@@ -12,10 +12,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1352d4fe-6ee0-419b-ab12-97744ec78dad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Invadel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Invadel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vsconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.vsconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Invadel/Character/BP_PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Invadel/Character/BP_PlayerCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/GameStartupMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/GameStartupMap.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Invadel.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Invadel.uproject" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1879,7 +1880,10 @@
       <workItem from="1718038366409" duration="235000" />
       <workItem from="1718039944452" duration="348000" />
       <workItem from="1718041763901" duration="3804000" />
-      <workItem from="1718128866699" duration="1081000" />
+      <workItem from="1718128866699" duration="3466000" />
+      <workItem from="1718206498704" duration="512000" />
+      <workItem from="1718296326769" duration="1425000" />
+      <workItem from="1718302509217" duration="512000" />
     </task>
     <servers />
   </component>
